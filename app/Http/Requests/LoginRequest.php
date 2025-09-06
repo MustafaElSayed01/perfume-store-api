@@ -11,9 +11,6 @@ class LoginRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        // After 6 PM not allowed to login
-        // otherwise, you may login
-
         return true;
     }
 

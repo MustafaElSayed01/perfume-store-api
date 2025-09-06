@@ -16,98 +16,83 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
-// View Tables
-Route::apiResource('users', UserController::class);
-Route::get('user-details/{user}', [UserController::class, 'details'])->name('users.details');
-Route::get('user-addresses/{user}', [UserController::class, 'addresses'])->name('users.addresses');
+// // Users
+// Route::apiResource('users', UserController::class);
+// Route::prefix('users')->controller(UserController::class)->group(function () {
+//     Route::get('{user}/details', 'details');
+//     Route::get('{user}/addresses', 'addresses');
+// });
 
-Route::apiResource('user-types', UserTypeController::class);
-Route::get('user-type-details/{userType}', [UserTypeController::class, 'details'])->name('user-types.details');
+// // User Types
+// Route::apiResource('user-types', UserTypeController::class);
+// Route::prefix('user-types')->controller(UserTypeController::class)->group(function () {
+//     Route::get('{userType}/details', 'details');
+// });
 
-Route::apiResource('permissions', PermissionController::class);
-Route::get('permission-details/{permission}', [PermissionController::class, 'details'])->name('permissions.details');
+// // Permissions
+// Route::apiResource('permissions', PermissionController::class);
+// Route::prefix('permissions')->controller(PermissionController::class)->group(function () {
+//     Route::get('{permission}/details', 'details');
+// });
 
-Route::apiResource('role-permissions', RolePermissionController::class);
-Route::get('role-permission-details/{rolePermission}', [RolePermissionController::class, 'details'])->name('role-permissions.details');
+// // Role Permissions
+// Route::apiResource('role-permissions', RolePermissionController::class);
+// Route::prefix('role-permissions')->controller(RolePermissionController::class)->group(function () {
+//     Route::get('{rolePermission}/details', 'details');
+// });
 
-Route::apiResource('product-types', ProductTypeController::class);
-Route::get('product-type-details/{productType}', [ProductTypeController::class, 'details'])->name('product-types.details');
+// // Product Types
+// Route::apiResource('product-types', ProductTypeController::class);
+// Route::prefix('product-types')->controller(ProductTypeController::class)->group(function () {
+//     Route::get('{productType}/details', 'details');
+// });
 
-Route::apiResource('products', ProductController::class);
+// // Products
+// Route::apiResource('products', ProductController::class);
 
-Route::apiResource('addresses', AddressController::class);
+// // Addresses
+// Route::apiResource('addresses', AddressController::class);
 
-Route::apiResource('carts', CartController::class);
-Route::get('cart-details/{cart}', [CartController::class, 'details'])->name('carts.details');
+// // Carts
+// Route::apiResource('carts', CartController::class);
+// Route::prefix('carts')->controller(CartController::class)->group(function () {
+//     Route::get('{cart}/details', 'details');
+// });
 
-Route::apiResource('cart-items', CartItemController::class);
+// // Cart Items
+// Route::apiResource('cart-items', CartItemController::class);
 
-Route::apiResource('orders', OrderController::class);
-Route::get('order-details/{order}', [OrderController::class, 'details'])->name('orders.details');
+// // Orders
+// Route::apiResource('orders', OrderController::class);
+// Route::prefix('orders')->controller(OrderController::class)->group(function () {
+//     Route::get('{order}/details', 'details');
+// });
 
-Route::apiResource('order-items', OrderItemController::class);
-
-
-
-
-// Users
-Route::apiResource('users', UserController::class);
-Route::prefix('users')->group(function () {
-    Route::get('{user}/details', 'details');
-    Route::get('{user}/addresses', 'addresses');
-});
-
-// User Types
-Route::apiResource('user-types', UserTypeController::class);
-Route::prefix('user-types')->group(function () {
-    Route::get('{userType}/details', 'details');
-});
-
-// Permissions
-Route::apiResource('permissions', PermissionController::class);
-Route::prefix('permissions')->group(function () {
-    Route::get('{permission}/details', 'details');
-});
-
-// Role Permissions
-Route::apiResource('role-permissions', RolePermissionController::class);
-Route::prefix('role-permissions')->group(function () {
-    Route::get('{rolePermission}/details', 'details');
-});
-
-// Product Types
-Route::apiResource('product-types', ProductTypeController::class);
-Route::prefix('product-types')->group(function () {
-    Route::get('{productType}/details', 'details');
-});
-
-// Products
-Route::apiResource('products', ProductController::class);
-
-// Addresses
-Route::apiResource('addresses', AddressController::class);
-
-// Carts
-Route::apiResource('carts', CartController::class);
-Route::prefix('carts')->group(function () {
-    Route::get('{cart}/details', 'details');
-});
-
-// Cart Items
-Route::apiResource('cart-items', CartItemController::class);
-
-// Orders
-Route::apiResource('orders', OrderController::class);
-Route::prefix('orders')->group(function () {
-    Route::get('{order}/details', 'details');
-});
-
-// Order Items
-Route::apiResource('order-items', OrderItemController::class);
+// // Order Items
+// Route::apiResource('order-items', OrderItemController::class);
 
 
 // Authenticated User
 Route::prefix('auth')->controller(AuthController::class)->group(function () {
     Route::post('login', 'login');
     Route::post('register', 'register');
+});
+
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResources(
+        [
+            'users' => UserController::class,
+            'products' => ProductController::class,
+            'orders' => OrderController::class,
+            'carts' => CartController::class,
+            'cart-items' => CartItemController::class,
+            'order-items' => OrderItemController::class,
+            'addresses' => AddressController::class,
+            'user-types' => UserTypeController::class,
+            'permissions' => PermissionController::class,
+            'role-permissions' => RolePermissionController::class,
+            'product-types' => ProductTypeController::class
+        ]
+    );
 });

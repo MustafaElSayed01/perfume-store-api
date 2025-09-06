@@ -1,10 +1,10 @@
 {
     "info": {
-        "_postman_id": "3f1d15ea-8021-4683-855e-847c32cb98ac",
+        "_postman_id": "33721be1-6919-40d3-8010-3e7102b3c0b0",
         "name": "Laravel-Api",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "_exporter_id": "17573484",
-        "_collection_link": "https://blue-water-202907.postman.co/workspace/My-Workspace~f21821c6-76f7-48bd-86ef-5a3d327d2eeb/collection/17573484-3f1d15ea-8021-4683-855e-847c32cb98ac?action=share&source=collection_link&creator=17573484"
+        "_collection_link": "https://blue-water-202907.postman.co/workspace/My-Workspace~f21821c6-76f7-48bd-86ef-5a3d327d2eeb/collection/17573484-33721be1-6919-40d3-8010-3e7102b3c0b0?action=share&source=collection_link&creator=17573484"
     },
     "item": [
         {
@@ -12,7 +12,6 @@
             "item": [
                 {
                     "name": "User",
-                    "description": "users Table",
                     "item": [
                         {
                             "name": "All Users",
@@ -66,12 +65,30 @@
                                 }
                             },
                             "response": []
+                        },
+                        {
+                            "name": "User Addresses",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{api_base_url}}/user-details/1",
+                                    "host": [
+                                        "{{api_base_url}}"
+                                    ],
+                                    "path": [
+                                        "user-details",
+                                        "1"
+                                    ]
+                                }
+                            },
+                            "response": []
                         }
-                    ]
+                    ],
+                    "description": "users Table"
                 },
                 {
                     "name": "User Type",
-                    "description": "user_types Table",
                     "item": [
                         {
                             "name": "All User Types",
@@ -126,11 +143,11 @@
                             },
                             "response": []
                         }
-                    ]
+                    ],
+                    "description": "user_types Table"
                 },
                 {
                     "name": "Permission",
-                    "description": "permissions Table",
                     "item": [
                         {
                             "name": "All Permissions",
@@ -185,11 +202,11 @@
                             },
                             "response": []
                         }
-                    ]
+                    ],
+                    "description": "permissions Table"
                 },
                 {
                     "name": "Role Permission",
-                    "description": "role_permissions Table",
                     "item": [
                         {
                             "name": "All Role Permissions",
@@ -244,11 +261,11 @@
                             },
                             "response": []
                         }
-                    ]
+                    ],
+                    "description": "role_permissions Table"
                 },
                 {
                     "name": "Product Type",
-                    "description": "product_types Table",
                     "item": [
                         {
                             "name": "All Product Types",
@@ -303,11 +320,11 @@
                             },
                             "response": []
                         }
-                    ]
+                    ],
+                    "description": "product_types Table"
                 },
                 {
                     "name": "Product",
-                    "description": "products Table",
                     "item": [
                         {
                             "name": "All Products",
@@ -344,11 +361,11 @@
                             },
                             "response": []
                         }
-                    ]
+                    ],
+                    "description": "products Table"
                 },
                 {
                     "name": "Address",
-                    "description": "addresses Table",
                     "item": [
                         {
                             "name": "All Addresses",
@@ -385,11 +402,11 @@
                             },
                             "response": []
                         }
-                    ]
+                    ],
+                    "description": "addresses Table"
                 },
                 {
                     "name": "Cart",
-                    "description": "carts Table",
                     "item": [
                         {
                             "name": "All Carts",
@@ -444,11 +461,11 @@
                             },
                             "response": []
                         }
-                    ]
+                    ],
+                    "description": "carts Table"
                 },
                 {
                     "name": "Cart Item",
-                    "description": "cart_items Table",
                     "item": [
                         {
                             "name": "All Cart Items",
@@ -466,30 +483,12 @@
                                 }
                             },
                             "response": []
-                        },
-                        {
-                            "name": "Specific Cart Item",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/cart-items/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "cart-items",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
                         }
-                    ]
+                    ],
+                    "description": "cart_items Table"
                 },
                 {
                     "name": "Order",
-                    "description": "orders Table",
                     "item": [
                         {
                             "name": "All Orders",
@@ -544,11 +543,11 @@
                             },
                             "response": []
                         }
-                    ]
+                    ],
+                    "description": "orders Table"
                 },
                 {
                     "name": "Order Item",
-                    "description": "order_items Table",
                     "item": [
                         {
                             "name": "All Order Items",
@@ -585,7 +584,92 @@
                             },
                             "response": []
                         }
+                    ],
+                    "description": "order_items Table"
+                },
+                {
+                    "name": "Auth",
+                    "item": [
+                        {
+                            "name": "New Request",
+                            "request": {
+                                "method": "GET",
+                                "header": []
+                            },
+                            "response": []
+                        }
                     ]
+                },
+                {
+                    "name": "Init",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/init",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "init"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Login",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{bearer_token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": []
+                        },
+                        "url": {
+                            "raw": "{{api_base_url}}/auth/login/?email=testing@gmail.com&password=password",
+                            "host": [
+                                "{{api_base_url}}"
+                            ],
+                            "path": [
+                                "auth",
+                                "login",
+                                ""
+                            ],
+                            "query": [
+                                {
+                                    "key": "email",
+                                    "value": "testing@gmail.com"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "password"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
                 }
             ]
         }

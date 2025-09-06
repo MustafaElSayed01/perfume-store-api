@@ -12,7 +12,6 @@ class AuthController extends Controller
     {
         $data = $request->validated();
         $auth = Auth::attempt($data);
-
         if ($auth) {
             $user = Auth::user();
             $token = $user->createToken('login');
