@@ -13,7 +13,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return User::all();
     }
 
     /**
@@ -37,7 +37,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return $user;
     }
 
     /**
@@ -63,4 +63,21 @@ class UserController extends Controller
     {
         //
     }
+
+    /**
+     * Display Addresses of the specified resource.
+     */
+    public function addresses(User $user)
+    {
+        return $user->addresses;
+    }
+
+    /**
+     * Display Details of the specified resource.
+     */
+    public function details(User $user)
+    {
+        return $user->load('addresses', 'orders');
+    }
+
 }

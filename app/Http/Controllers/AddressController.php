@@ -13,7 +13,7 @@ class AddressController extends Controller
      */
     public function index()
     {
-        //
+        return Address::all();
     }
 
     /**
@@ -37,7 +37,7 @@ class AddressController extends Controller
      */
     public function show(Address $address)
     {
-        //
+        return $address;
     }
 
     /**

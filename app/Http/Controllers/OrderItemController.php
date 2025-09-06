@@ -13,7 +13,7 @@ class OrderItemController extends Controller
      */
     public function index()
     {
-        //
+        return OrderItem::all();
     }
 
     /**
@@ -37,7 +37,7 @@ class OrderItemController extends Controller
      */
     public function show(OrderItem $orderItem)
     {
-        //
+        return $orderItem;
     }
 
     /**
@@ -62,5 +62,9 @@ class OrderItemController extends Controller
     public function destroy(OrderItem $orderItem)
     {
         //
+    }
+    public function details(OrderItem $orderItem)
+    {
+        return $orderItem->load('product');
     }
 }

@@ -17,11 +17,17 @@ class ProductTypeFactory extends Factory
      */
     public function definition(): array
     {
+        $parent = null;
+
+        if ($this->faker->boolean(50) && ProductType::exists()) {
+            $parent = ProductType::inRandomOrder()->first()->id;
+        }
+
         return [
             'name' => $this->faker->unique()->words(3, true),
             'slug' => $this->faker->unique()->slug(),
             'description' => $this->faker->paragraph(),
-            'product_type_id' => ProductType::inRandomOrder()->first()->id,
+            'parent_id' => $parent,
             'is_active' => $this->faker->boolean(),
         ];
     }

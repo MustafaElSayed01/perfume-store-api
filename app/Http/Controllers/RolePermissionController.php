@@ -13,7 +13,7 @@ class RolePermissionController extends Controller
      */
     public function index()
     {
-        //
+        return RolePermission::all();
     }
 
     /**
@@ -37,7 +37,7 @@ class RolePermissionController extends Controller
      */
     public function show(RolePermission $rolePermission)
     {
-        //
+        return $rolePermission;
     }
 
     /**
@@ -62,5 +62,9 @@ class RolePermissionController extends Controller
     public function destroy(RolePermission $rolePermission)
     {
         //
+    }
+    public function details(RolePermission $rolePermission)
+    {
+        return $rolePermission->load('user_type', 'permission');
     }
 }

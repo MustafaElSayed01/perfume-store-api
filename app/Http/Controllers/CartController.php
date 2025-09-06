@@ -13,7 +13,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        return Cart::all();
     }
 
     /**
@@ -37,7 +37,7 @@ class CartController extends Controller
      */
     public function show(Cart $cart)
     {
-        //
+        return $cart;
     }
 
     /**
@@ -62,5 +62,9 @@ class CartController extends Controller
     public function destroy(Cart $cart)
     {
         //
+    }
+    public function details(Cart $cart)
+    {
+        return $cart->load('items');
     }
 }

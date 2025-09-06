@@ -10,6 +10,14 @@ class OrderItem extends Model
 {
     /** @use HasFactory<\Database\Factories\OrderItemFactory> */
     use HasFactory;
+    // Fillable fields
+    protected $fillable = [
+        'order_id',
+        'product_id',
+        'quantity',
+        'unit_price',
+        'total_price',
+    ];
 
     // Relationships
     public function order(): BelongsTo

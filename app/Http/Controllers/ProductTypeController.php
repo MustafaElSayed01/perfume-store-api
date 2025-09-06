@@ -13,7 +13,7 @@ class ProductTypeController extends Controller
      */
     public function index()
     {
-        //
+        return ProductType::all();
     }
 
     /**
@@ -37,7 +37,7 @@ class ProductTypeController extends Controller
      */
     public function show(ProductType $productType)
     {
-        //
+        return $productType;
     }
 
     /**
@@ -62,5 +62,9 @@ class ProductTypeController extends Controller
     public function destroy(ProductType $productType)
     {
         //
+    }
+    public function details(ProductType $productType)
+    {
+        return $productType->load('products');
     }
 }

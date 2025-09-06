@@ -13,7 +13,7 @@ class UserTypeController extends Controller
      */
     public function index()
     {
-        //
+        return UserType::all();
     }
 
     /**
@@ -37,7 +37,7 @@ class UserTypeController extends Controller
      */
     public function show(UserType $userType)
     {
-        //
+        return $userType;
     }
 
     /**
@@ -62,5 +62,9 @@ class UserTypeController extends Controller
     public function destroy(UserType $userType)
     {
         //
+    }
+    public function details(UserType $userType)
+    {
+        return $userType->load('users');
     }
 }

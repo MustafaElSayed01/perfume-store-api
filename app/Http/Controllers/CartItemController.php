@@ -13,7 +13,7 @@ class CartItemController extends Controller
      */
     public function index()
     {
-        //
+        return CartItem::all();
     }
 
     /**

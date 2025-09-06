@@ -7,6 +7,8 @@ use App\Models\Cart;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+use function Symfony\Component\String\b;
+
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Order>
  */
@@ -36,7 +38,7 @@ class OrderFactory extends Factory
         return [
             'order_number' => strtoupper($this->faker->bothify('ORD-####-????')),
             'user_id' => $user->id,
-            'cart_id' => Cart::inRandomOrder()->first()->id ?? Cart::factory()->create()->id,
+            'cart_id' => Cart::inRandomOrder()->first()->id,
             'status' => $this->faker->randomElement(['pending', 'processing', 'shipped', 'delivered', 'canceled']),
             'total_amount' => $this->faker->randomFloat(2, 10, 500),
             'shipping_amount' => $this->faker->randomFloat(2, 0, 50),
@@ -44,7 +46,7 @@ class OrderFactory extends Factory
             'final_total' => function (array $attributes) {
                 return $attributes['total_amount'] + $attributes['shipping_amount'] + $attributes['tax_amount'];
             },
-            'shipping_address_id' => $shipping->id,
+            'shipping_address_id' => $shipping->id ?? $billing->id,
             'billing_address_id' => $billing->id ?? $shipping->id,
         ];
     }

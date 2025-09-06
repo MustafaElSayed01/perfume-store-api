@@ -20,7 +20,9 @@ class RolePermissionSeeder extends Seeder
 
         $allPermissions = Permission::pluck('id', 'name');
         if ($admin) {
-            $admin->permissions()->sync($allPermissions->values()->all());
+            $admin->permissions()->sync([
+                $allPermissions['all'],
+            ]);
         }
 
         if ($customer) {

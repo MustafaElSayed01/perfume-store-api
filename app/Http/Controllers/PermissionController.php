@@ -13,7 +13,7 @@ class PermissionController extends Controller
      */
     public function index()
     {
-        //
+        return Permission::all();
     }
 
     /**
@@ -37,7 +37,7 @@ class PermissionController extends Controller
      */
     public function show(Permission $permission)
     {
-        //
+        return $permission;
     }
 
     /**
@@ -62,5 +62,9 @@ class PermissionController extends Controller
     public function destroy(Permission $permission)
     {
         //
+    }
+    public function details(Permission $permission)
+    {
+        return $permission->load('roles');
     }
 }

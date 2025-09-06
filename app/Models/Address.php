@@ -11,6 +11,15 @@ class Address extends Model
     /** @use HasFactory<\Database\Factories\AddressFactory> */
     use HasFactory;
 
+    // Fillable fields
+    protected $fillable = [
+        'user_id',
+        'street',
+        'city',
+        'state',
+        'postal_code',
+        'country',
+    ];
     // Relationships
     public function user(): BelongsTo
     {

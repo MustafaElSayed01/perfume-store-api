@@ -23,7 +23,7 @@ return new class extends Migration {
             $table->boolean('is_default')->default(false);
             $table->timestamps();
             $table->softDeletes();
-            $table->unique(['user_id', 'usage_type', 'is_default'], 'user_default_per_usage');
+            // $table->unique(['user_id', 'usage_type', 'is_default'], 'user_default_per_usage');
         });
     }
 

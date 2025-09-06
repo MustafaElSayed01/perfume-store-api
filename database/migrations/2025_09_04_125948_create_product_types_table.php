@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\ProductType;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -16,7 +15,7 @@ return new class extends Migration {
             $table->string('name')->unique();
             $table->string('slug')->unique();
             $table->text('description')->nullable();
-            $table->foreignIdFor(ProductType::class)->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('parent_id')->nullable()->constrained('product_types')->nullOnDelete();
             $table->boolean('is_active')->default(true);
             $table->timestamps();
             $table->softDeletes();
