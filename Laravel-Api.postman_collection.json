@@ -1,677 +1,1390 @@
 {
-    "info": {
-        "_postman_id": "33721be1-6919-40d3-8010-3e7102b3c0b0",
-        "name": "Laravel-Api",
-        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-        "_exporter_id": "17573484",
-        "_collection_link": "https://blue-water-202907.postman.co/workspace/My-Workspace~f21821c6-76f7-48bd-86ef-5a3d327d2eeb/collection/17573484-33721be1-6919-40d3-8010-3e7102b3c0b0?action=share&source=collection_link&creator=17573484"
-    },
-    "item": [
-        {
-            "name": "perfume-store",
-            "item": [
-                {
-                    "name": "User",
-                    "item": [
-                        {
-                            "name": "All Users",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/users",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "users"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        },
-                        {
-                            "name": "Specific User",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/users/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "users",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        },
-                        {
-                            "name": "User Details",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/user-details/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "user-details",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        },
-                        {
-                            "name": "User Addresses",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/user-details/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "user-details",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        }
-                    ],
-                    "description": "users Table"
-                },
-                {
-                    "name": "User Type",
-                    "item": [
-                        {
-                            "name": "All User Types",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/user-types",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "user-types"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        },
-                        {
-                            "name": "Specific User Type",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/user-types/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "user-types",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        },
-                        {
-                            "name": "User Type Details",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/user-type-details/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "user-type-details",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        }
-                    ],
-                    "description": "user_types Table"
-                },
-                {
-                    "name": "Permission",
-                    "item": [
-                        {
-                            "name": "All Permissions",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/permissions",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "permissions"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        },
-                        {
-                            "name": "Specific Permission",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/permissions/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "permissions",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        },
-                        {
-                            "name": "Permission Details",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/permission-details/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "permission-details",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        }
-                    ],
-                    "description": "permissions Table"
-                },
-                {
-                    "name": "Role Permission",
-                    "item": [
-                        {
-                            "name": "All Role Permissions",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/role-permissions",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "role-permissions"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        },
-                        {
-                            "name": "Specific Role Permission",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/role-permissions/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "role-permissions",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        },
-                        {
-                            "name": "Role Permission Details",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/role-permission-details/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "role-permission-details",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        }
-                    ],
-                    "description": "role_permissions Table"
-                },
-                {
-                    "name": "Product Type",
-                    "item": [
-                        {
-                            "name": "All Product Types",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/product-types",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "product-types"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        },
-                        {
-                            "name": "Specific Product Type",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/product-types/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "product-types",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        },
-                        {
-                            "name": "Product Type Details",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/product-type-details/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "product-type-details",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        }
-                    ],
-                    "description": "product_types Table"
-                },
-                {
-                    "name": "Product",
-                    "item": [
-                        {
-                            "name": "All Products",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/products",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "products"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        },
-                        {
-                            "name": "Specific Product",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/products/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "products",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        }
-                    ],
-                    "description": "products Table"
-                },
-                {
-                    "name": "Address",
-                    "item": [
-                        {
-                            "name": "All Addresses",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/addresses",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "addresses"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        },
-                        {
-                            "name": "Specific Address",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/addresses/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "addresses",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        }
-                    ],
-                    "description": "addresses Table"
-                },
-                {
-                    "name": "Cart",
-                    "item": [
-                        {
-                            "name": "All Carts",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/carts",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "carts"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        },
-                        {
-                            "name": "Specific Cart",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/carts/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "carts",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        },
-                        {
-                            "name": "Cart Details",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/cart-details/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "cart-details",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        }
-                    ],
-                    "description": "carts Table"
-                },
-                {
-                    "name": "Cart Item",
-                    "item": [
-                        {
-                            "name": "All Cart Items",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/cart-items",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "cart-items"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        }
-                    ],
-                    "description": "cart_items Table"
-                },
-                {
-                    "name": "Order",
-                    "item": [
-                        {
-                            "name": "All Orders",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/orders",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "orders"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        },
-                        {
-                            "name": "Specific Order",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/orders/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "orders",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        },
-                        {
-                            "name": "Order Details",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/order-details/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "order-details",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        }
-                    ],
-                    "description": "orders Table"
-                },
-                {
-                    "name": "Order Item",
-                    "item": [
-                        {
-                            "name": "All Order Items",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/order-items",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "order-items"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        },
-                        {
-                            "name": "Specific Order Item",
-                            "request": {
-                                "method": "GET",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{api_base_url}}/order-items/1",
-                                    "host": [
-                                        "{{api_base_url}}"
-                                    ],
-                                    "path": [
-                                        "order-items",
-                                        "1"
-                                    ]
-                                }
-                            },
-                            "response": []
-                        }
-                    ],
-                    "description": "order_items Table"
-                },
-                {
-                    "name": "Auth",
-                    "item": [
-                        {
-                            "name": "New Request",
-                            "request": {
-                                "method": "GET",
-                                "header": []
-                            },
-                            "response": []
-                        }
-                    ]
-                },
-                {
-                    "name": "Init",
-                    "request": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                            "raw": "{{base_url}}/init",
-                            "host": [
-                                "{{base_url}}"
-                            ],
-                            "path": [
-                                "init"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Login",
-                    "request": {
-                        "auth": {
-                            "type": "bearer",
-                            "bearer": [
-                                {
-                                    "key": "token",
-                                    "value": "{{bearer_token}}",
-                                    "type": "string"
-                                }
-                            ]
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Accept",
-                                "value": "application/json",
-                                "type": "text"
-                            },
-                            {
-                                "key": "Content-Type",
-                                "value": "application/json",
-                                "type": "text"
-                            }
-                        ],
-                        "body": {
-                            "mode": "urlencoded",
-                            "urlencoded": []
-                        },
-                        "url": {
-                            "raw": "{{api_base_url}}/auth/login/?email=testing@gmail.com&password=password",
-                            "host": [
-                                "{{api_base_url}}"
-                            ],
-                            "path": [
-                                "auth",
-                                "login",
-                                ""
-                            ],
-                            "query": [
-                                {
-                                    "key": "email",
-                                    "value": "testing@gmail.com"
-                                },
-                                {
-                                    "key": "password",
-                                    "value": "password"
-                                }
-                            ]
-                        }
-                    },
-                    "response": []
-                }
-            ]
-        }
-    ]
+	"info": {
+		"_postman_id": "209339f6-c9f6-470d-805c-31a720f81a48",
+		"name": "Laravel-Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48220424"
+	},
+	"item": [
+		{
+			"name": "perfume-store",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "All Users",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/users",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Specific User",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/users/3",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"users",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/users/3/details",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"users",
+										"3",
+										"details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User Addresses",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/users/1/addresses",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"users",
+										"1",
+										"addresses"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "users table"
+				},
+				{
+					"name": "User Type",
+					"item": [
+						{
+							"name": "All User Types",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/user-types",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"user-types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Specific User Type",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/user-types/1",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"user-types",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User Type Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/user-types/1/details",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"user-types",
+										"1",
+										"details"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "user_types Table"
+				},
+				{
+					"name": "Permission",
+					"item": [
+						{
+							"name": "All Permissions",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/permissions",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"permissions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Specific Permission",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/permissions/1",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"permissions",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Permission Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/permissions/1/details",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"permissions",
+										"1",
+										"details"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "permissions Table"
+				},
+				{
+					"name": "Role Permission",
+					"item": [
+						{
+							"name": "All Role Permissions",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/role-permissions",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"role-permissions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Specific Role Permission",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/role-permissions/1",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"role-permissions",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Role Permission Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/role-permissions/1/details",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"role-permissions",
+										"1",
+										"details"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "role_permissions Table"
+				},
+				{
+					"name": "Product Type",
+					"item": [
+						{
+							"name": "All Product Types",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/product-types",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"product-types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Specific Product Type",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/product-types/1",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"product-types",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Product Type Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/product-types/1/details",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"product-types",
+										"1",
+										"details"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "product_types Table"
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "All Products",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/products",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Specific Product",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/products/2",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"products",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "products Table"
+				},
+				{
+					"name": "Address",
+					"item": [
+						{
+							"name": "All Addresses",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/addresses",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"addresses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Specific Address",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/addresses/2",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"addresses",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "addresses Table"
+				},
+				{
+					"name": "Cart",
+					"item": [
+						{
+							"name": "All Carts",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/carts",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"carts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Specific Cart",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/carts/2",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"carts",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cart Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/carts/2/details",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"carts",
+										"2",
+										"details"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "carts Table"
+				},
+				{
+					"name": "Cart Item",
+					"item": [
+						{
+							"name": "All Cart Items",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/cart-items",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"cart-items"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Specific Cart Item",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/cart-items/3",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"cart-items",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "cart_items Table"
+				},
+				{
+					"name": "Order",
+					"item": [
+						{
+							"name": "All Orders",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/orders",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Specific Order",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/orders/2",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"orders",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Order Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/orders/3/details",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"orders",
+										"3",
+										"details"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "orders Table"
+				},
+				{
+					"name": "Order Item",
+					"item": [
+						{
+							"name": "All Order Items",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/order-items",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"order-items"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Specific Order Item",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_base_url}}/order-items/4",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"order-items",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "order_items Table"
+				},
+				{
+					"name": "Login",
+					"item": [
+						{
+							"name": "Web Login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{api_base_url}}/auth/login/web?email=testing@gmail.com&password=password",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"auth",
+										"login",
+										"web"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "testing@gmail.com"
+										},
+										{
+											"key": "password",
+											"value": "password"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Mobile Login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{api_base_url}}/auth/login/mobile?email=testing@gmail.com&password=password",
+									"host": [
+										"{{api_base_url}}"
+									],
+									"path": [
+										"auth",
+										"login",
+										"mobile"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "testing@gmail.com"
+										},
+										{
+											"key": "password",
+											"value": "password"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Sessions",
+							"item": [
+								{
+									"name": "Active Sessions",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{api_base_url}}/auth/sessions/active",
+											"host": [
+												"{{api_base_url}}"
+											],
+											"path": [
+												"auth",
+												"sessions",
+												"active"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Current Session",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{api_base_url}}/auth/sessions/current",
+											"host": [
+												"{{api_base_url}}"
+											],
+											"path": [
+												"auth",
+												"sessions",
+												"current"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Other Sessions",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{api_base_url}}/auth/sessions/others",
+											"host": [
+												"{{api_base_url}}"
+											],
+											"path": [
+												"auth",
+												"sessions",
+												"others"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Specific Session",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{api_base_url}}/auth/sessions/3/show",
+											"host": [
+												"{{api_base_url}}"
+											],
+											"path": [
+												"auth",
+												"sessions",
+												"3",
+												"show"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Logout",
+							"item": [
+								{
+									"name": "All Sessions",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{api_base_url}}/auth/logout/all",
+											"host": [
+												"{{api_base_url}}"
+											],
+											"path": [
+												"auth",
+												"logout",
+												"all"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Current Session",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{api_base_url}}/auth/logout/current",
+											"host": [
+												"{{api_base_url}}"
+											],
+											"path": [
+												"auth",
+												"logout",
+												"current"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Other Sessions",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{api_base_url}}/auth/logout/others",
+											"host": [
+												"{{api_base_url}}"
+											],
+											"path": [
+												"auth",
+												"logout",
+												"others"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Specific Session",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{api_base_url}}/auth/logout/session/5",
+											"host": [
+												"{{api_base_url}}"
+											],
+											"path": [
+												"auth",
+												"logout",
+												"session",
+												"5"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Profile",
+							"item": []
+						}
+					]
+				},
+				{
+					"name": "Init",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/init",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"init"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "test",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{auth}}/request",
+							"host": [
+								"{{auth}}"
+							],
+							"path": [
+								"request"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{web_token}}",
+						"type": "string"
+					}
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000",
+			"type": "string"
+		},
+		{
+			"key": "api_base_url",
+			"value": "http://localhost:8000/api",
+			"type": "string"
+		},
+		{
+			"key": "web_token",
+			"value": "8|RL05sG4Jrf7cS1FCUaBYFeELvqiIpZ0CXdJPZZ1K23532870",
+			"type": "string"
+		},
+		{
+			"key": "mobile_token",
+			"value": "",
+			"type": "string"
+		}
+	]
 }

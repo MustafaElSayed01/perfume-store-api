@@ -37,7 +37,7 @@ class CartItemController extends Controller
      */
     public function show(CartItem $cartItem)
     {
-        //
+        return $cartItem;
     }
 
     /**
