@@ -86,21 +86,6 @@ Route::prefix('auth')->controller(AuthController::class)->group(function () {
 
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::apiResources(
-        [
-            'users' => UserController::class,
-            'products' => ProductController::class,
-            'orders' => OrderController::class,
-            'carts' => CartController::class,
-            'cart-items' => CartItemController::class,
-            'order-items' => OrderItemController::class,
-            'addresses' => AddressController::class,
-            'user-types' => UserTypeController::class,
-            'permissions' => PermissionController::class,
-            'role-permissions' => RolePermissionController::class,
-            'product-types' => ProductTypeController::class
-        ]
-    );
 
     // Users
     Route::prefix('users')->controller(UserController::class)->group(function () {
@@ -137,7 +122,21 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::prefix('orders')->controller(OrderController::class)->group(function () {
         Route::get('{order}/details', 'details');
     });
-
+    Route::apiResources(
+        [
+            'users' => UserController::class,
+            'products' => ProductController::class,
+            'orders' => OrderController::class,
+            'carts' => CartController::class,
+            'cart-items' => CartItemController::class,
+            'order-items' => OrderItemController::class,
+            'addresses' => AddressController::class,
+            'user-types' => UserTypeController::class,
+            'permissions' => PermissionController::class,
+            'role-permissions' => RolePermissionController::class,
+            'product-types' => ProductTypeController::class
+        ]
+    );
     // Auth
     Route::prefix('auth')->controller(AuthController::class)->group(function () {
         // All Sessions
@@ -145,7 +144,7 @@ Route::middleware('auth:sanctum')->group(function () {
             Route::get('active', 'active_sessions');
             Route::get('current', 'current_session');
             Route::get('others', 'other_sessions');
-            Route::get('/{id}/show', 'show_session');
+            Route::get('{id}', 'show_session');
         });
 
         // logout
@@ -153,7 +152,7 @@ Route::middleware('auth:sanctum')->group(function () {
             Route::post('all', 'logout_all');
             Route::post('current', 'logout_current');
             Route::post('others', 'logout_others');
-            Route::post('session/{id}', 'logout_session');
+            Route::post('{id}', 'logout_session');
         });
         // Profile
 

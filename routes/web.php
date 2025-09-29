@@ -7,7 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/init', function () {
+Route::get('/models_init', function () {
     $models = [
         'User',
         'UserType',
@@ -19,7 +19,7 @@ Route::get('/init', function () {
         'Cart',
         'CartItem',
         'Order',
-        'OrderItem'
+        'OrderItem',
     ];
 
     foreach ($models as $model) {
@@ -27,5 +27,27 @@ Route::get('/init', function () {
 
         // Hold the loop for 1 second
         sleep(1);
+    }
+});
+
+Route::get('/resources_init', function () {
+
+    $models = [
+        'User',
+        'UserType',
+        'Permission',
+        'RolePermission',
+        'ProductType',
+        'Product',
+        'Address',
+        'Cart',
+        'CartItem',
+        'Order',
+        'OrderItem',
+    ];
+
+    foreach ($models as $model) {
+        Artisan::call('make:resource', ['name' => "{$model}Resource"]);
+        Artisan::call('make:resource', ['name' => "{$model}Collection"]);
     }
 });

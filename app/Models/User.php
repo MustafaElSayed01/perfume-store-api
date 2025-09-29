@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -13,7 +14,7 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable, HasApiTokens;
+    use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -21,9 +22,13 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
+        'phone',
+        'date_of_birth',
         'email',
         'password',
+        'is_active',
     ];
 
     /**
@@ -45,22 +50,27 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
+            'date_of_birth' => 'datetime',
             'password' => 'hashed',
         ];
     }
+
     // Relationships
     public function user_type(): BelongsTo
     {
         return $this->belongsTo(UserType::class);
     }
+
     public function addresses(): HasMany
     {
         return $this->hasMany(Address::class);
     }
+
     public function orders(): HasMany
     {
         return $this->hasMany(Order::class);
     }
+
     public function cart(): HasMany
     {
         return $this->hasMany(Cart::class);
